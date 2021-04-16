@@ -1,0 +1,17 @@
+{{page-title "Place"}}
+<div class="place-page">
+  <div class="place-details">
+    <div class="overview">
+      <h2 class="title">{{@model.title}}</h2>
+      <p class="description">{{@model.description}}</p>
+      <p class="last-visited">Last Visited: {{@model.formattedDate}}</p>
+    </div>
+    <ul class="images">
+      {{#each @model.images as |image|}}
+        <li>
+          <div class="image-tile" alt={{image.alt}} style="background-image: url('{{image.url}}');"> &nbsp; </div>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>

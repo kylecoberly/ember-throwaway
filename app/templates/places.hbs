@@ -1,0 +1,20 @@
+{{page-title "Places"}}
+<ul class="places">
+  {{#each @model as |listing|}}
+    <li>
+      <PlaceListing
+      @image={{listing.leadImage.url}}
+      @title={{listing.title}}
+      >
+      <LinkTo class="more" @route="place" @model={{listing}}>
+          More
+        </LinkTo>
+      </PlaceListing>
+    </li>
+  {{/each}}
+  <li>
+    <LinkTo class="add" @route="new">
+      +
+    </LinkTo>
+  </li>
+</ul>

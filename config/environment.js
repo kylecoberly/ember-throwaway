@@ -6,6 +6,8 @@ module.exports = function (environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
+    API_BASE_URL: 'https://places-api-dev.herokuapp.com',
+    API_KEY: '16182711342326074db9e817c8b7c55977705',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

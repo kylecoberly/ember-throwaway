@@ -1,0 +1,23 @@
+<form class="new-place-form" {{on "submit" this.addPlace}}>
+  <label for="title">Title</label>
+  <Input @id="title" @value={{this.title}} />
+
+  <label for="description">Description</label>
+  <Textarea @id="description" @value={{this.description}}></Textarea>
+
+  <label for="last-visited">When did you last go there?</label>
+  <Input @type="date" @id="last-visited" @value={{this.last_visited}} />
+
+  <p>Add URLs for any images you have:</p>
+  <ul>
+    {{#each this.images as |image|}}
+      <li>
+        <Input class="image-url" type="text" @value={{image.url}} />
+      </li>
+    {{/each}}
+  </ul>
+  <div class="add-image-wrapper">
+    <button class="add-image" {{on "click" this.addImage}}>+</button>
+  </div>
+  <input type="submit" value="Add It To The List">
+</form>

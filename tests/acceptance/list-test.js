@@ -6,9 +6,9 @@ module('Acceptance | list', function (hooks) {
   setupApplicationTest(hooks);
 
   test('visiting /list', async function (assert) {
-    await visit('/list');
+    await visit('/places');
 
-    assert.equal(currentURL(), '/list');
+    assert.equal(currentURL(), '/places');
     assert.equal(
       document.querySelectorAll('[data-test-place-listing]').length,
       2
